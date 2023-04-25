@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 public class StudentController {
-    private StudentRepository studentRepository;
+    private final StudentRepository studentRepository;
 
     @PostMapping("/register/source")
     Long studentRegister(@RequestBody StudentDTO studentDTO){
-        log.info("Source Data 입력, id : {}, name : {}, major : {}, professor : {} ",
+        log.info("Source Data 입력, studentId : {}, name : {}, major : {}, professor : {} ",
                 studentDTO.getStudent_id(), studentDTO.getStudent_name(), studentDTO.getMajor(), studentDTO.getProfessor());
 
         Student student = Student.builder()

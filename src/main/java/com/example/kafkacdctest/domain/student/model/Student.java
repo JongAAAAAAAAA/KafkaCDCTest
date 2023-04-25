@@ -28,8 +28,7 @@ public class Student {
     private String professor;
 
     @Builder
-    public Student(long id, Integer student_id, String student_name, String major, String professor) {
-        this.id = id;
+    public Student(Integer student_id, String student_name, String major, String professor) {
         this.student_id = student_id;
         this.student_name = student_name;
         this.major = major;
