@@ -20,7 +20,7 @@ public class StudentController {
         log.info("Source Data 입력, studentId : {}, name : {}, major : {}, professor : {} ",
                 studentDTO.getStudent_id(), studentDTO.getStudent_name(), studentDTO.getMajor(), studentDTO.getProfessor());
 
-        Student student = Student.builder() //id 는 자동생성이라 builder에 안 넣어줘도 될 듯!?
+        Student student = Student.builder() //id 는 자동생성이라 builder에 안 넣어줘도 될 듯!?1
                 .student_id(studentDTO.getStudent_id())
                 .student_name(studentDTO.getStudent_name())
                 .major(studentDTO.getMajor())
